@@ -11,3 +11,4 @@ function MovieCard({ movie, onClick }) {
     </div>
   );
 }
+export default MovieCard;
