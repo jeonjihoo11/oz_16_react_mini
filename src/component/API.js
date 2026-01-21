@@ -14,3 +14,12 @@ export const testAPI = async () => {
   const data = await res.json();
   console.log(data);
 };
+
+export const searchMovies = async (query) => {
+  const res = await fetch(
+    `${BASE_URL}/search/movie?query=${encodeURIComponent(query)}`,
+    options,
+  );
+  const data = await res.json();
+  return data.results;
+};

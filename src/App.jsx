@@ -6,6 +6,7 @@ import "./App.css";
 import Layout from "./component/LayOut.jsx";
 import MovieCard from "./MovieCard.jsx";
 import { useEffect, useState } from "react";
+import SearchPage from "./component/SearchPage.jsx";
 
 function MovieList() {
   const navigate = useNavigate();
@@ -39,6 +40,7 @@ export default function App() {
       <Route element={<Layout />}>
         <Route path="/" element={<MovieList />} />
         <Route path="/details/:id" element={<MovieDetail />} />
+        <Route path="/search" element={<SearchPage />} />
       </Route>
     </Routes>
   );
